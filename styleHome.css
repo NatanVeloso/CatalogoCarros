@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background: linear-gradient(rgba(17, 17, 17, 0.61), rgba(20, 20, 20, 0.61)), url(/imagens/background-car.jpg);
+    background: linear-gradient(rgba(17, 17, 17, 0.61), rgba(20, 20, 20, 0.61)), url(imagens/background-car.jpg);
     background-position: center center;
     background-size: cover;
     background-position-y: 0px;
@@ -60,7 +60,8 @@ header {
 }
 
 .menu-content .list-itens a {
-    text-decoration: none;  /*Tira o sublinhado das listas*/
+    text-decoration: none;
+    /*Tira o sublinhado das listas*/
     color: #13c3f8e3;
     padding: 0.2rem;
     transform: 2ms ease-in;
@@ -123,7 +124,7 @@ main {
     border-radius: 20px;
     position: relative;
     transition: 1.5ms;
-    
+
 }
 
 .btns {
