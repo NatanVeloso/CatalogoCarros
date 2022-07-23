@@ -31,7 +31,7 @@ body {
 header {
     width: 100%;
     height: 7%;
-    background: rgba(22, 22, 22, 0.185);
+    background: rgba(22, 22, 22, 0.555);
 }
 
 .menu-content {
@@ -45,9 +45,10 @@ header {
 .logo {
     font-size: 1.8em;
     letter-spacing: 0.4rem;
+    /* margin-left: 50px; */
     /*espaço entre as letras*/
-    cursor: pointer;
-    /*Deixar cursor como mao*/
+    /*Deixar cursor como seta*/
+    cursor: default;
 }
 
 .menu-content .list-itens {
@@ -112,7 +113,6 @@ main {
     height: 4vh;
 }
 
-
 .btns button {
     width: 200px;
     height: 40px;
@@ -124,7 +124,6 @@ main {
     border-radius: 20px;
     position: relative;
     transition: 1.5ms;
-
 }
 
 .btns {
@@ -142,8 +141,7 @@ main {
 }
 
 .btns button:hover {
-    color: rgb(199, 199, 45);
-
+    color: rgb(44, 168, 199);
 }
 
 .btns button:before {

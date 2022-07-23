@@ -1,1 +1,366 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Zerando o css como margens e bordas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo de tela da HOME */
+html {
+    width: 100%;
+    /*largura*/
+    height: 100%;
+    /*altura*/
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    background-color: rgba(230, 230, 230, 0.877);
+}
+
+/* menu - header - nav */
+header {
+    width: 100%;
+    height: 7%;
+    background: rgba(22, 22, 22, 0.966);
+}
+
+.menu-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8em;
+}
+
+.logo {
+    font-size: 1.8em;
+    letter-spacing: 0.4rem;
+    /*espaço entre as letras*/
+    /*Deixar cursor como seta*/
+    cursor: default;
+}
+
+.menu-content .list-itens {
+    display: flex;
+    /*Para deixar um item do lado do outro*/
+    list-style: none;
+    /*Tirar as bolinhas das listas*/
+    gap: 30px;
+    /*Espaço de 20px entre as listas*/
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    /*Tira o sublinhado das listas*/
+    color: #13c3f8e3;
+    padding: 0.2rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+/* Criando animação nos menus */
+.menu-content .list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(184, 173, 173);
+    transition: all 1.5s ease;
+}
+
+.menu-content .list-itens a:hover:before {
+    width: 100%;
+}
+
+
+
+/* Catálogo */
+section .catalog {
+    width: 10vw;
+    padding: 100px;
+}
+
+section .filter-card {
+    width: 40vw;
+    height: 80px;
+    /* background-color: rgba(163, 163, 163, 0.658); */
+    border-radius: 8px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    width: 550px;
+    height: 50px;
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 10px;
+}
+
+.search-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(38, 22, 255, 0.959);
+    color: white;
+    font-size: 1.8em;
+    transition: 0.2s ease;
+}
+
+.search-button:hover {
+    background-color: rgb(10, 21, 119);
+    font-weight: bold;
+}
+
+.title-wrapper-catalog {
+    margin: 20px 0px 20px 100px;
+    color: black;
+    font-size: 2.5em;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+section .card-wrapper {
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    ;
+}
+
+
+section .card-item {
+    margin: 50px 0px 0px 20px;
+    height: 400px;
+    background: rgba(60, 194, 221, 0.644);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-item img {
+    width: 88%;
+}
+
+.card-item h3 {
+    font-weight: bold;
+    font-size: 2.2em;
+}
+
+.card-item p {
+    width: 90%;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+
+.card-item button {
+    width: 90%;
+    padding: 15px 0px;
+    border: none;
+    background-color: rgba(17, 0, 255, 0.644);
+    color: white;
+    border-radius: 4px;
+    font-size: 1.8em;
+    cursor: pointer;
+    transform: 0.2s ease;
+    margin-bottom: 10px;
+}
+
+.card-item button:hover {
+    background-color: rgb(10, 21, 119);
+    transition: 0.2s ease;
+    font-weight: bold;
+}
+
+
+/* About */
+.about {
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+.about-content {
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: #dedede3b;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    width: 25%;
+    min-width: 300px;
+    height: 100%;
+    background-color: #000000a1;
+    border-radius: 8px;
+}
+
+.right {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10%;
+}
+
+.right h3 {
+    width: 90%;
+    text-align: right;
+    font-size: 2.6em;
+    margin-bottom: 20px;
+}
+
+.right p {
+    max-width: 90%;
+    text-align: justify;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+}
+
+/* Features */
+.features {
+    color: black;
+    width: 100%;
+    height: 100%;
+    background: #dededede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.title-wrapper-features {
+    padding: 20px 0px;
+}
+
+.feature-card-block {
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+}
+
+.feature-card-item {
+    max-width: 420px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #dedede3b;
+    border-radius: 4px;
+}
+
+.feature-text-content {
+    max-width: 60%;
+    margin: 5px;
+}
+
+.feature-card-item img {
+    width: 64px;
+    height: 64px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 100px;
+    font-size: 1.6em;
+}
+
+footer .main {
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    padding: 20px 10px;
+}
+
+.footer-links {
+    max-width: 1000px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-company,
+.footer-rental,
+.footer-contact,
+.footer-social a {
+    color: white;
+    height: 100%;
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links h4 {
+    margin-bottom: 8px;
+}
+
+.main {
+    width: 32px;
+    height: 32px;
+}
+
+footer .last {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
